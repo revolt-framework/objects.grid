@@ -1,0 +1,54 @@
+//
+// REVOLT!
+// OBJECTS.GRID
+//
+
+
+
+// Predefine the variables below to alter and enable specific features.
+
+$revo-grid-namespace:    $revo-objects-namespace !default;
+
+$revo-grid-columns:      12;
+$revo-grid-gutter-x:     $revo-spacer-x;
+$revo-grid-gutter-y:     $revo-spacer-y;
+
+
+
+// Grid container
+
+.#{$revo-grid-namespace}grid {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -($revo-grid-gutter-x);
+}
+
+
+
+// Column default style
+
+[class*="#{$revo-grid-namespace}grid__col"] {
+    width: 100%; // Default
+    padding-right: $revo-grid-gutter-x;
+    margin-bottom: $revo-grid-gutter-y;
+}
+
+
+
+// Generate responsive columns
+
+// Loop through all breakpoints
+@each $breakpoint in map-keys($revo-media-breakpoints) {
+    // Use breakpoint media query
+    @include media-breakpoint-up($breakpoint) {
+        // Generate column classes
+        @for $column from 1 through $revo-grid-columns {
+            .#{$revo-grid-namespace}grid__col-#{$breakpoint}-#{$column} {
+                $fraction: ($column / $revo-grid-columns);
+                flex: 0 0 auto;
+                width: calc(99.999999% * #{$fraction});
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "revolt.objects.grid",
+  "homepage": "https://github.com/revolt-framework/objects.grid",
+  "authors": [
+    {
+      "name": "Ruven Pelka",
+      "email": "ruven.pelka@gmail.com",
+      "homepage": "http://ruvenpelka.com"
+    }
+  ],
+  "description": "Revolt framework's grid module.",
+  "main": "_objects.grid.scss",
+  "keywords": [
+    "revolt",
+    "oocss",
+    "css",
+    "grid",
+    "columns"
+  ],
+  "dependencies": {
+    "revolt.settings.defaults": "0.x.x",
+    "revolt.settings.responsive": "0.x.x",
+    "revolt.tools.responsive": "0.x.x"
+  },
+  "license": "MIT"
+}
