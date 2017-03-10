@@ -9,9 +9,9 @@
 
 $revo-grid-namespace:    $revo-objects-namespace !default;
 
-$revo-grid-columns:      12;
-$revo-grid-gutter-x:     $revo-spacer-x;
-$revo-grid-gutter-y:     $revo-spacer-y;
+$revo-grid-columns:      12 !default;
+$revo-grid-gutter-x:     $revo-spacer-x !default;
+$revo-grid-gutter-y:     $revo-spacer-y !default;
 
 
 
